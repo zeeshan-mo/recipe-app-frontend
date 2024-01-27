@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import FilterButton from "./FilterButton";
+import AppBar from "./AppBar";
+import SearchBar from "./SearchBar";
+import SelectionPanel from "./SelectionPanel";
+import { Typography, Stack } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppBar />
+      <Stack spacing={2} sx={{ mt: 10 }}>
+        <Typography variant="h3" color="blue.main" sx={{ alignSelf: "center" }}>
+          Pick your Ingredients
+        </Typography>
+        <SearchBar />
+        <FilterButton />
+        <SelectionPanel />
+      </Stack>
+    </>
   );
 }
 
